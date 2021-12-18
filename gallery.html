@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Gallery</title>
+</head>
+<body bgcolor=#D7E7FF>
+<br>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1F3040;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #717A8B;
+}
+</style>
+</head>
+
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="experience.html">Experience</a></li>
+  <li><a href="education.html">Education</a></li>
+  <li><a href="family.html">Family</a></li>
+  <li><a href="enjoyment.html">Enjoyment</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+
+<br>
+<center><a href="#My Family"><img src="images/familybutton.png"</a> <a href="#My Friends"><img src="images/friendsbutton.png"></a> <a href="#Myself"><img src="images/myselfbutton.png"></a> <a href="#My Pet"><img src="images/petbutton.png"></a> 
+<br>
+<br>
+<br>
+<h2 style="text-align:center">My Everything <8</h2>
+<br>
+<font size="28"><a name="My Family">My Family</a></font>
+<br>
+<br>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Times New Roman;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+
+<div class="container">
+  <div class="mySlides">
+    <div class="My Everything">1 / 6</div>
+    <img src="images/family1.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/family2.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/family3.jpg">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/family5.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/family4.jpg">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/family6.jpg">
+  </div>
+    
+  
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/family1.jpg" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/family2.jpg" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/family3.jpg" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/family5.jpg" style="width:100%" onclick="currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/family4.jpg" style="width:100%" onclick="currentSlide(5)">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/family6.jpg" style="width:100%" onclick="currentSlide(6)">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "")
+}
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br>
+<br>
+<font size="28"><a name="My Friends">My Friends</a></font>
+<br>
+<br>
+<br>
+<img src="images/friends1.jpg" border="2"> <img src="images/friends2.jpg" border="2"> <img src="images/friends4.jpg" border="2"> <img src="images/friends5.jpg" border="2"> 
+<br>
+<br>   
+<font size="28"><a name="Myself">Myself</a></font>
+<br>
+<br>
+<br>
+<img src="images/myself1.jpg" border="2"> <img src="images/myself2.jpg" border="2">  <img src="images/myself3.jpg" border="2">  <img src="images/myself4.jpg" border="2">
+<br>
+<br>
+<font size="28"><a name="My Pet">My Pet</a></font>
+<br>
+<br>
+<br>
+<img src="images/pet1.jpg" border="2"> <img src="images/pet2.jpg" border="2"> <img src="images/pet3.jpg" border="2"> <img src="images/pet4.jpg" border="2"> 
+<br>
+<br>
+<embed src="video/jackfrost.mp4" autoplay="false"</embed>       
+</body>
+
+
+</body>
+</html>
